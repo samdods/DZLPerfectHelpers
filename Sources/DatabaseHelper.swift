@@ -31,10 +31,10 @@ public struct Database {
     
 }
 
-public class Table {
+open class Table {
     public typealias ColumnInfo = (type: String, constraints: String?)
-    public class func name() -> String { fatalError() } // must override
-    public class func columns() -> [String: ColumnInfo] { fatalError() } // must override
+    open class func name() -> String { fatalError() } // must override
+    open class func columns() -> [String: ColumnInfo] { fatalError() } // must override
     
     private init() {} // cannot instantiate
     
